@@ -7,16 +7,22 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class SQLiteDatabaseOpenHelper extends SQLiteOpenHelper{
 	
-	public SQLiteDatabaseOpenHelper(Context context, String name,
-			CursorFactory factory, int version) {
+	public SQLiteDatabaseOpenHelper(Context context) {
 		super(context, SQLiteDatabaseSetting.DATABASE_NAME, 
 				null, SQLiteDatabaseSetting.DATABASE_VERSION);
 	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		// TODO Auto-generated method stub
-		
+		db.execSQL(SQLiteDatabaseSetting.CREATE_TABLE_BRANDS);
+		db.execSQL(SQLiteDatabaseSetting.CREATE_TABLE_ITEMS);
+		db.execSQL(SQLiteDatabaseSetting.CREATE_TABLE_PHOTOS);
+		db.execSQL(SQLiteDatabaseSetting.CREATE_TABLE_ITEM_PHOTOS);
+		db.execSQL(SQLiteDatabaseSetting.CREATE_TABLE_CATEGORIES);
+		db.execSQL(SQLiteDatabaseSetting.CREATE_TABLE_CATEGORY_RELATIONSHIP);
+		db.execSQL(SQLiteDatabaseSetting.CREATE_TABLE_CRITERIA);
+		db.execSQL(SQLiteDatabaseSetting.CREATE_TABLE_CATEGORY_CRITERIA);
+		db.execSQL(SQLiteDatabaseSetting.CREATE_TABLE_RATING);
 	}
 
 	@Override

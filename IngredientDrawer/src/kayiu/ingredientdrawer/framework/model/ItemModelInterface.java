@@ -9,16 +9,8 @@ public interface ItemModelInterface {
 	BrandModelInteface brand = null;
 	String locationName = null;
 	
-	abstract void setItemId(Integer id);
-	abstract Integer getItemId();
-	abstract void setItemName(String name);
-	abstract String getItemName();
-	abstract void setPhotoId(List<PhotoModelInteface> photoId);
-	abstract List<PhotoModelInteface> getPhotoId();
-	abstract void setLocationName(String name);
-	abstract String getLocationName();
-	abstract void setBrand(BrandModelInteface brand);
-	abstract BrandModelInteface getBrand();
-	
-	
+	abstract void addItem(Integer itemId, String itemName, String locationName, 
+			BrandModelInteface brand, List<PhotoModelInteface> photoList);
+	abstract ItemModelInterface getItemById(Integer id);
+	abstract void removeItem(Integer id);
 }
