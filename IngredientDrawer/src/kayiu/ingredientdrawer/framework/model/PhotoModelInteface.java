@@ -1,4 +1,4 @@
-package kayiu.ingredientdrawer.model;
+package kayiu.ingredientdrawer.framework.model;
 
 public interface PhotoModelInteface {
 	Integer photoId = null;
